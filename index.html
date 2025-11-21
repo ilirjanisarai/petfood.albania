@@ -1,28 +1,130 @@
-
 <!DOCTYPE html>
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
     <title>PetFood Albania</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-        header { background-color: #4CAF50; color: white; padding: 20px 0; text-align: center; }
-        nav { background-color: #333; overflow: hidden; }
-        nav a { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
-        nav a:hover { background-color: #ddd; color: black; }
-        .hero { background-color: #e0f7e9; padding: 60px 20px; text-align: center; }
-        .hero h1 { font-size: 36px; color: #333; }
-        .categories { display: flex; flex-wrap: wrap; justify-content: center; padding: 40px 20px; background: #fff; }
-        .category { background: #f0f0f0; margin: 10px; padding: 20px; width: 200px; text-align: center; border-radius: 8px; }
-        .category h3 { margin: 10px 0; }
-        .contact { background: #4CAF50; color: white; padding: 40px 20px; text-align: center; }
-        footer { background: #222; color: white; text-align: center; padding: 10px 0; }
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', sans-serif; 
+            background: #f5f7fa; 
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2E8B57);
+            padding: 25px 0;
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        /* NAV */
+        nav {
+            background: white;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+
+        nav a {
+            color: #333;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* HERO */
+        .hero {
+            background: url("https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1350&q=80") center/cover;
+            padding: 120px 20px;
+            color: white;
+            text-align: center;
+            text-shadow: 0px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 20px;
+            animation: fadeIn 1.8s ease-in-out;
+        }
+
+        /* CATEGORIES */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            gap: 25px;
+        }
+
+        .category {
+            background: white;
+            width: 230px;
+            border-radius: 12px;
+            text-align: center;
+            padding-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform .2s;
+        }
+
+        .category:hover {
+            transform: translateY(-7px);
+        }
+
+        .category img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .category h3 {
+            margin: 15px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #4CAF50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>PetFood Albania</h1>
+    PetFood Albania
 </header>
 
 <nav>
@@ -34,16 +136,41 @@
 
 <section class="hero">
     <h1>Dashuri në çdo kafshatë</h1>
-    <p>Ushqim i shëndetshëm për miqtë tuaj me katër putra</p>
+    <p>Ushqim i shëndetshëm, i freskët dhe i sigurt për miqtë tuaj me katër putra</p>
 </section>
 
 <section class="categories">
-    <div class="category"><h3>Qen</h3></div>
-    <div class="category"><h3>Mace</h3></div>
-    <div class="category"><h3>Zogj</h3></div>
-    <div class="category"><h3>Peshq</h3></div>
-    <div class="category"><h3>Lepuj</h3></div>
-    <div class="category"><h3>Suplement Ushqimor</h3></div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?q=80&w=800" alt="Qen">
+        <h3>Qen</h3>
+    </div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1595433707802-3b1f1ef2ecb5?q=80&w=800" alt="Mace">
+        <h3>Mace</h3>
+    </div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1508675801634-7df6c8e9d7c1?q=80&w=800" alt="Zogj">
+        <h3>Zogj</h3>
+    </div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1522107177-e33de10b3274?q=80&w=800" alt="Peshq">
+        <h3>Peshq</h3>
+    </div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=800" alt="Lepuj">
+        <h3>Lepuj</h3>
+    </div>
+
+    <div class="category">
+        <img src="https://images.unsplash.com/photo-1559175048-8d7f948a7194?q=80&w=800" alt="Suplement Ushqimor">
+        <h3>Suplement Ushqimor</h3>
+    </div>
+
 </section>
 
 <section class="contact">
@@ -52,7 +179,7 @@
 </section>
 
 <footer>
-    <p>&copy; 2024 PetFood Albania. Të gjitha të drejtat e rezervuara.</p>
+    © 2024 PetFood Albania. Të gjitha të drejtat e rezervuara.
 </footer>
 
 </body>
